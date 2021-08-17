@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import "./App.css";
 
-function App() {
+const API =
+  "https://api.giphy.com/v1/gifs/search?api_key=hD3H95AQ2lW0CqQUDQayS78jDExfrhT8&q=pokemon&limit=10&offset=0&rating=g&lang=en";
+
+const App = () => {
+  const [gifs, setGifs] = useState([]);
+
+  useEffect(() => {
+    fetch(API)
+      .then((res) => res.json())
+      .then((result) => {
+        const { data } = result;
+        if (Array.isArray(data)) {
+          const gifs = data.map((image) => image.images.downsized_medium.url);
+          setGifs(gifs);
+        }
+      });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className="App-content">
+        {gifs.map((gif) => (
+          <img src={gif} alt="Gif" />
+        ))}
+      </section>
     </div>
   );
-}
+};
 
 export default App;
