@@ -3,15 +3,45 @@
 :root {
   --dark-blue: #282c34;
   --blue: #61dafb;
+  --blue-hover: #57c4e1;
   --white: #fff;
 }
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 18px;
+  background-color: var(--dark-blue);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--white);
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.section {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 960px) {
+  .section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

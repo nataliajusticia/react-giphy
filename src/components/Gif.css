@@ -1,0 +1,40 @@
+/* Gif Component */
+
+.gif {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--white);
+  text-decoration: none;
+  border: 5px solid var(--white);
+  transition: 0.2s ease;
+}
+
+.gif:hover {
+  border: 5px solid var(--blue);
+  box-shadow: 0.5rem 1rem 0 0 var(--blue-hover);
+}
+
+.gif h2 {
+  color: var(--dark-blue);
+}
+
+.gifMedia {
+  position: relative;
+  width: 100%;
+  padding-top: 66.67%; /* 3:2 Aspect Ratio */
+}
+
+.gifMedia img {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
