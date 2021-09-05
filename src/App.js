@@ -1,13 +1,17 @@
-import ListOfGifs from "./components/ListOfGifs";
+import ListOfGifs from "./components/ListOfGifs/ListOfGifs";
+
+import { Link, Route } from "wouter";
 
 const App = () => {
   return (
     <div className="App">
-      <header>GIPHY.</header>
+      <header>
+        <Link to="/">GIPHY.</Link>
+      </header>
 
       <main className="container">
         <div className="section">
-          <ListOfGifs keyword="switzerland" />
+          <Route path="/search/:keyword" component={ListOfGifs} />
         </div>
       </main>
     </div>

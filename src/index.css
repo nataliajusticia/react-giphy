@@ -8,9 +8,8 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 18px;
@@ -26,6 +25,12 @@ header {
   font-size: 2rem;
 }
 
+header a {
+  color: var(--dark-blue);
+  text-decoration: none;
+  font-weight: bolder;
+}
+
 .container {
   max-width: 1200px;
   margin-left: auto;
@@ -38,6 +43,16 @@ header {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+}
+
+.loading {
+  color: var(--white);
+  font-weight: bold;
+  font-size: 2rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media screen and (min-width: 960px) {
