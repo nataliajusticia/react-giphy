@@ -1,4 +1,5 @@
-import ListOfGifs from "./components/ListOfGifs/ListOfGifs";
+import HomePage from "./pages/Home/index";
+import SearchResultsPage from "./pages/SearchResults";
 
 import { Link, Route } from "wouter";
 
@@ -10,9 +11,8 @@ const App = () => {
       </header>
 
       <main className="container">
-        <div className="section">
-          <Route path="/search/:keyword" component={ListOfGifs} />
-        </div>
+        <Route path="/" component={HomePage} />
+        <Route path="/search/:keyword" component={SearchResultsPage} />
       </main>
     </div>
   );

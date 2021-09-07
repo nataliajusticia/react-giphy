@@ -12,7 +12,7 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 18px;
+  font-size: 20px;
   background-color: var(--dark-blue);
   margin: 0;
   padding: 0;
@@ -43,6 +43,21 @@ header a {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--white);
 }
 
 .loading {
