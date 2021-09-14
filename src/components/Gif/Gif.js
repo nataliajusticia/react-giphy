@@ -3,7 +3,7 @@ import styles from "./gif.module.css";
 const Gif = ({ id, title, url }) => {
   return (
     <a href={`#${id}`} className={styles.gif}>
-      <h2>{title}</h2>
+      <h3>{title}</h3>
 
       <div className={styles.gifMedia}>
         <img src={url} alt={title} />

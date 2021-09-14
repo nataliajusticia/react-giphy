@@ -1,19 +1,15 @@
 /* Home Page */
 
-.home {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.home h1 {
+.home > h2 {
   margin: 0;
+  margin-top: 6rem;
 }
 
 .form {
   display: flex;
   align-items: center;
   width: 100%;
+  margin: 6rem 0 0 0;
 }
 
 .form input {
@@ -25,7 +21,7 @@
   line-height: 48px;
   border-radius: 0;
   border: 0;
-  margin: 10rem 0;
+  margin: 0;
   padding: 10px;
   color: var(--black);
   background-color: var(--grey);
@@ -55,11 +51,12 @@
   margin: 2rem 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
 }
 
 .list li {
+  margin-right: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -73,4 +70,8 @@
 .list a:hover {
   color: var(--white);
   background-color: var(--black);
+}
+
+.section {
+  margin-top: 2rem;
 }

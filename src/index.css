@@ -44,13 +44,13 @@ header a {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .section {
   margin: 4rem 0;
   display: grid;
-  gap: 4rem;
+  gap: 3rem;
   grid-template-columns: 1fr;
 }
 

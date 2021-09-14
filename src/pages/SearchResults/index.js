@@ -1,21 +1,12 @@
-import { useState, useEffect } from "react";
+import { Link } from "wouter";
 import ListOfGifs from "../../components/ListOfGifs/ListOfGifs";
 
-import getGifs from "../../services/getGifs";
+import useGifs from "../../hooks/useGifs";
+import styles from "./searchResults.module.css";
 
 const SearchResultsPage = ({ params }) => {
   const { keyword } = params;
-
-  const [loading, setLoading] = useState(false);
-  const [gifs, setGifs] = useState([]);
-
-  useEffect(() => {
-    setLoading(true);
-    getGifs({ keyword }).then((gifs) => {
-      setGifs(gifs);
-      setLoading(false);
-    });
-  }, [keyword]);
+  const { loading, gifs } = useGifs({ keyword });
 
   if (loading) {
     return (
@@ -26,9 +17,15 @@ const SearchResultsPage = ({ params }) => {
   }
 
   return (
-    <section className="section">
-      <ListOfGifs gifs={gifs} />
-    </section>
+    <>
+      <Link to="/" className={styles.backLink}>
+        Go back home
+      </Link>
+
+      <section className="section">
+        <ListOfGifs gifs={gifs} />
+      </section>
+    </>
   );
 };
 
