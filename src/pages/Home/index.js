@@ -24,13 +24,14 @@ const HomePage = () => {
       <form onSubmit={handleSubmit} className={styles.form}>
         <input
           onChange={handleChange}
+          value={keyword}
           placeholder="Search for a gif"
           type="text"
         />
         <button>Search</button>
       </form>
 
-      <h1>The most popular GIFS</h1>
+      <h1>🔥 Trending GIFs</h1>
 
       <ul className={styles.list}>
         {POPULAR_GIFS.map((popularGif) => (

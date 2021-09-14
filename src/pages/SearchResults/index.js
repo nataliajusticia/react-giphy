@@ -18,7 +18,11 @@ const SearchResultsPage = ({ params }) => {
   }, [keyword]);
 
   if (loading) {
-    return <section className="loading">Loading ...</section>;
+    return (
+      <section className="loading">
+        <span>Loading ...</span>
+      </section>
+    );
   }
 
   return (
