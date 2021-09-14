@@ -1,7 +1,9 @@
 @import-normalize; /* bring in normalize.css styles */
 
 :root {
+  --black: #282c34;
   --dark-blue: #282c34;
+  --grey: #ccc;
   --blue: #61dafb;
   --blue-hover: #57c4e1;
   --white: #fff;
@@ -39,7 +41,7 @@ header a {
 }
 
 .section {
-  margin: 2rem 0;
+  margin: 2rem 0 4rem 0;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -72,6 +74,6 @@ h6 {
 
 @media screen and (min-width: 960px) {
   .section {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }

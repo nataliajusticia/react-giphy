@@ -18,13 +18,13 @@ const SearchResultsPage = ({ params }) => {
   }, [keyword]);
 
   if (loading) {
-    return <div className="loading">Loading ...</div>;
+    return <section className="loading">Loading ...</section>;
   }
 
   return (
-    <div className="section">
+    <section className="section">
       <ListOfGifs gifs={gifs} />
-    </div>
+    </section>
   );
 };
 

@@ -1,20 +1,45 @@
-import { Link } from "wouter";
+import { useState } from "react";
+import { Link, useLocation } from "wouter";
+
+import styles from "./home.module.css";
 
 const POPULAR_GIFS = ["pizza", "barcelona", "pokemon"];
 
 const HomePage = () => {
-  return (
-    <>
-      <h3>The most popular GIFS</h3>
+  const [keyword, setKeyword] = useState("");
+  const [path, pushLocation] = useLocation();
 
-      <ul>
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+
+    pushLocation(`/search/${keyword}`);
+  };
+
+  const handleChange = (evt) => {
+    setKeyword(evt.target.value);
+  };
+
+  return (
+    <section className={styles.home}>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <input
+          onChange={handleChange}
+          placeholder="Search for a gif"
+          type="text"
+        />
+        <button>Search</button>
+      </form>
+
+      <h1>The most popular GIFS</h1>
+
+      <ul className={styles.list}>
         {POPULAR_GIFS.map((popularGif) => (
           <li key={popularGif}>
             <Link to={`/search/${popularGif}`}>Gifs of {popularGif}</Link>
           </li>
         ))}
       </ul>
-    </>
+    </section>
   );
 };
 
