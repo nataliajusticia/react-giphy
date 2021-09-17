@@ -4,14 +4,9 @@
   display: inline-block;
   margin-top: 4rem;
 
-  background-image: linear-gradient(currentColor, currentColor);
-  background-position: 0% 100%;
-  background-repeat: no-repeat;
-  background-size: 100% 2px;
-  transition: background-size 0.3s, color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .backLink:hover {
   color: var(--blue-hover);
-  background-size: 0% 2px;
 }

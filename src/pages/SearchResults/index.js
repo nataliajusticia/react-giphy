@@ -19,7 +19,7 @@ const SearchResultsPage = ({ params }) => {
   return (
     <>
       <Link to="/" className={styles.backLink}>
-        Go back home
+        ⬅️ Go back home
       </Link>
 
       <section className="section">

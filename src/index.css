@@ -4,6 +4,7 @@
   --black: #0b0b0e;
   --grey: #d6d6df;
   --blue: #61dafb;
+  --blue-light: rgba(97, 218, 251, 0.2);
   --blue-hover: #57c4e1;
   --white: #fcfcff;
 
@@ -24,6 +25,12 @@ body {
   background-color: var(--white);
 }
 
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 header {
   border-bottom: 1px solid var(--grey);
   background-color: var(--white);
@@ -38,6 +45,21 @@ header a {
   text-decoration: none;
   font-weight: bolder;
   letter-spacing: 0.2;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+  margin-top: 6rem;
+  padding: 3rem 0;
+  background-color: var(--blue-light);
+}
+
+footer p {
+  font-size: 0.8rem;
 }
 
 .container {

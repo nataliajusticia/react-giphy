@@ -11,7 +11,7 @@ const POPULAR_GIFS = ["pizza", "barcelona", "pokemon", "spain", "love"];
 const HomePage = () => {
   const [keyword, setKeyword] = useState("");
   const [path, pushLocation] = useLocation();
-  const { loading, gifs } = useGifs({ keyword: "pizza" });
+  const { loading, gifs } = useGifs();
 
   const handleSubmit = (evt) => {
     evt.preventDefault();

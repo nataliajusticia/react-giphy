@@ -10,10 +10,22 @@ const App = () => {
         <Link to="/">GIPHY.</Link>
       </header>
 
-      <main className="container">
-        <Route path="/" component={HomePage} />
-        <Route path="/search/:keyword" component={SearchResultsPage} />
+      <main>
+        <div className="container">
+          <Route path="/" component={HomePage} />
+          <Route path="/search/:keyword" component={SearchResultsPage} />
+        </div>
       </main>
+
+      <footer>
+        <div className="container">
+          <p>
+            Developed by{" "}
+            <a href="https://nataliajusticia.com">nataliajusticia.com</a> with
+            React.js
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
